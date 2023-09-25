@@ -1,0 +1,105 @@
+/* element styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: linear-gradient(to right, #cbce91ff, #ea738dff);
+}
+
+h1,
+label:not(.result_guess),
+p {
+  padding: 15px;
+  padding-left: 40px;
+}
+
+h5 {
+  font-style: italic;
+  padding-left: 40px;
+  padding-bottom: 15px;
+}
+
+button {
+  background: #213555;
+  border: 0;
+  color: white;
+  padding: 12px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  font-weight: bold;
+}
+button:hover {
+  background: #4f709c;
+  cursor: pointer;
+}
+
+input {
+  padding: 3.5px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* id styles */
+#first_number {
+  margin-left: 25px;
+}
+
+/* class styles */
+.section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game_heading {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.main-section-container {
+  width: 850px;
+  height: 450px;
+  padding: 25px;
+  outline: solid 2px black;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  border-radius: 10% / 50%;
+  background-color: #f8f6f4;
+}
+
+.first_number {
+  padding-bottom: 15px;
+}
+
+.display_container {
+  margin: 5px;
+  margin-left: 215px;
+  display: inline-block;
+}
+
+.output {
+  display: inline-block;
+}
+
+.result_container {
+  padding-bottom: 20px;
+}
+
+.button_container {
+  padding-bottom: 18px;
+  padding-top: 15px;
+}
+
+.result_guess {
+  margin-top: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}

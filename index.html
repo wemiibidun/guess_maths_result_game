@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Web-based maths game</title>
+    <!-- external css stylesheet file link -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <section class="section-container">
+      <div class="main-section-container">
+        <!-- ask users to enter two numbers -->
+        <!-- try a dropdown so that users can choose numbers -->
+        <h1 class="game_heading">Guess the maths result game</h1>
+        <h5>This game generates random maths operators. You have to guess the result to know if you are right or wrong</h5>
+
+        <form id="myform">
+          <div class="first_number">
+            <label for="text">Enter first number:</label>
+            <input type="text" id="first_number" name="first_number" value="" />
+          </div>
+
+          <div class="second_number">
+            <label for="text">Enter second number:</label>
+            <input
+              type="text"
+              id="second_number"
+              name="second_number"
+              value=""
+            />
+          </div>
+
+          <div class="display_container">
+            <div class="button_container">
+              <button type="button" onclick="checkinput()">
+                Generate random maths operator
+              </button>
+              <!-- display random operators here -->
+              <span id="output" class="output"></span>
+              <span id="no_output" class="no_output"></span>
+            </div>
+
+            <div class="result_container">
+              <label for="text" class="result_guess">Guess the result:</label>
+              <input type="text" name="result_ab" />
+              <button type="button" onclick="guessResult()">Submit</button>
+            </div>
+
+            <span id="display_answer">
+              display correct or incorrect here
+            </span>
+          </div>
+        </form>
+        </div>
+      </div>
+    </section>
+    <!-- external JS file link -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
