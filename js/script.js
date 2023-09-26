@@ -81,10 +81,18 @@ function guessResult() {
   }
 }
 
+// clear all buttons
 function clearButton() {
   document.getElementById("myForm").reset();
 }
 
+// clear innerhtml after submit
 function clearInnerHtml() {
   document.getElementById("output").innerHTML = '';
 }
+
+// page reload after 12 seconds
+document.getElementById("myForm").onsubmit = setTimeout(function(){
+  window.location.reload();
+}, 12000);
+
