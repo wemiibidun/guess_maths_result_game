@@ -79,3 +79,7 @@ function guessResult() {
 function clearButton() {
   document.getElementById("myForm").reset();
 }
+
+function clearInnerHtml() {
+  document.getElementById("output").innerHTML = '';
+}
