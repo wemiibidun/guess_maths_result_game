@@ -15,7 +15,7 @@
         <h1 class="game_heading">Guess the maths result game</h1>
         <h5>This game generates random maths operators. You have to guess the result to know if you are right or wrong</h5>
 
-        <form id="myform">
+        <form id="myForm">
           <div class="first_number">
             <label for="text">Enter first number:</label>
             <input type="text" id="first_number" name="first_number" value="" />
@@ -33,7 +33,7 @@
 
           <div class="display_container">
             <div class="button_container">
-              <button type="button" onclick="checkinput()">
+              <button type="button" onclick="checkinput();">
                 Generate random maths operator
               </button>
               <!-- display random operators here -->
@@ -41,12 +41,11 @@
               <span id="no_output" class="no_output"></span>
             </div>
 
-            <div class="result_container">
+            <div id="result_container" class="result_container">
               <label for="text" class="result_guess">Guess the result:</label>
               <input type="text" id="users_result" name="result_ab" />
-              <button type="button" onclick="guessResult()">Submit</button>
+              <button type="button" onclick="guessResult(); clearButton();">Submit</button>
             </div>
-
             <span id="display_answer"></span>
           </div>
         </form>

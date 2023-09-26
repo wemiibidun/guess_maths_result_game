@@ -20,6 +20,8 @@ function checkinput() {
   operator = displayRandomOperators();
   first_number = document.getElementById("first_number").value;
   second_number = document.getElementById("second_number").value;
+  let show_result_container = document.getElementById("result_container");
+  show_result_container.style.display = "block";
 
   if (
     first_number == "" ||
@@ -45,7 +47,6 @@ function guessResult() {
 
   if (operator == "+") {
     answer = first_number + second_number;
-    // document.getElementById("display_answer").innerHTML = answer;
     if (users_result == answer) {
       document.getElementById("display_answer").innerHTML = right_response;
     } else {
@@ -53,29 +54,28 @@ function guessResult() {
     }
   } else if (operator == "-") {
     answer = first_number - second_number;
-    document.getElementById("display_answer").innerHTML = answer;
-    console.log("this is the subract result");
-    console.log(answer);
-    return answer;
+    if (users_result == answer) {
+      document.getElementById("display_answer").innerHTML = right_response;
+    } else {
+      document.getElementById("display_answer").innerHTML = wrong_response;
+    }
   } else if (operator == "*") {
     answer = first_number * second_number;
-    document.getElementById("display_answer").innerHTML = answer;
-    console.log("this is the multiply result");
-    console.log(answer);
-    return answer;
+    if (users_result == answer) {
+      document.getElementById("display_answer").innerHTML = right_response;
+    } else {
+      document.getElementById("display_answer").innerHTML = wrong_response;
+    }
   } else if (operator == "/") {
     answer = first_number / second_number;
-    document.getElementById("display_answer").innerHTML = answer;
-    console.log("this is the division result");
-    console.log(answer);
-    return answer;
+    if (users_result == answer) {
+      document.getElementById("display_answer").innerHTML = right_response;
+    } else {
+      document.getElementById("display_answer").innerHTML = wrong_response;
+    }
   }
 }
 
-result = guessResult();
-
-// function displayCorrectOrIncorrect() {
-//  let result = guessResult();
-//  console.log("this is the result");
-//  console.log(result);
-// }
+function clearButton() {
+  document.getElementById("myForm").reset();
+}
