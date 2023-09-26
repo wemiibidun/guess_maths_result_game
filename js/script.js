@@ -5,6 +5,7 @@ let first_number;
 let second_number;
 let output;
 let no_input;
+let either_output;
 
 //this function displays random operators when the button is triggered
 function displayRandomOperators() {
@@ -21,17 +22,21 @@ function checkinput() {
   first_number = document.getElementById("first_number").value;
   second_number = document.getElementById("second_number").value;
   let show_result_container = document.getElementById("result_container");
-  show_result_container.style.display = "block";
 
-  if (
-    first_number == "" ||
-    first_number == null ||
-    second_number == "" ||
-    second_number == null
-  ) {
+  if(first_number && second_number){
+    show_result_container.style.display = "block";
+  }
+  
+  if ((first_number == "" || first_number == null) && (second_number == "" || second_number == null)) {
     no_input = "Please enter two numbers";
     document.getElementById("output").innerHTML = no_input;
-  } else {
+  } else if((first_number == "") || (second_number == "")){
+    first_number = parseInt(document.getElementById("first_number").value);
+    second_number = parseInt(document.getElementById("second_number").value);
+    either_output = "Please enter a second number";
+    document.getElementById("output").innerHTML = either_output;
+  }
+  else {
     first_number = parseInt(document.getElementById("first_number").value);
     second_number = parseInt(document.getElementById("second_number").value);
     document.getElementById("output").innerHTML =
