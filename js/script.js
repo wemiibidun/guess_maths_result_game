@@ -72,11 +72,17 @@ function guessResult() {
       document.getElementById("display_answer").innerHTML = wrong_response;
     }
   } else if (operator == "/") {
+    let division_divisor;
+    
+    if(second_number == Number(0)){
+      division_divisor ="ERROR! You cannot use 0 as a divisor, choose another number";
+    }
+
     answer = first_number / second_number;
     if (users_result == answer) {
       document.getElementById("display_answer").innerHTML = right_response;
     } else {
-      document.getElementById("display_answer").innerHTML = wrong_response;
+      document.getElementById("display_answer").innerHTML = division_divisor;
     }
   }
 }
@@ -87,12 +93,12 @@ function clearButton() {
 }
 
 // clear innerhtml after submit
-function clearInnerHtml() {
+function clearOutputInnerHtml() {
   document.getElementById("output").innerHTML = '';
 }
 
-// page reload after 12 seconds
-document.getElementById("myForm").onsubmit = setTimeout(function(){
-  window.location.reload();
-}, 12000);
+// page reload after 15 seconds
+// document.getElementById("myForm").onsubmit = setTimeout(function(){
+//   window.location.reload();
+// }, 15000);
 
