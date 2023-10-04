@@ -31,14 +31,14 @@ function checkinput() {
     no_input = "Please enter two numbers";
     document.getElementById("output").innerHTML = no_input;
   } else if((first_number == "") || (second_number == "")){
-    first_number = parseInt(document.getElementById("first_number").value);
-    second_number = parseInt(document.getElementById("second_number").value);
+    first_number = parseFloat(document.getElementById("first_number").value);
+    second_number = parseFloat(document.getElementById("second_number").value);
     either_output = "Please enter a second number";
     document.getElementById("output").innerHTML = either_output;
   }
   else {
-    first_number = parseInt(document.getElementById("first_number").value);
-    second_number = parseInt(document.getElementById("second_number").value);
+    first_number = parseFloat(document.getElementById("first_number").value);
+    second_number = parseFloat(document.getElementById("second_number").value);
     document.getElementById("output").innerHTML =
       first_number + operator + second_number;
   }
@@ -48,7 +48,7 @@ function guessResult() {
   let answer;
   let right_response = "Your answer is correct. You win!";
   let wrong_response = "Your answer is incorrect. Try again!";
-  let users_result = parseInt(document.getElementById("users_result").value);
+  let users_result = parseFloat(document.getElementById("users_result").value);
 
   if (operator == "+") {
     answer = first_number + second_number;
@@ -96,9 +96,4 @@ function clearButton() {
 function clearOutputInnerHtml() {
   document.getElementById("output").innerHTML = '';
 }
-
-// page reload after 15 seconds
-// document.getElementById("myForm").onsubmit = setTimeout(function(){
-//   window.location.reload();
-// }, 15000);
 
