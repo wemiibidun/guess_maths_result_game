@@ -20,7 +20,7 @@ This web-based maths game asks users to input 2 numbers and accept the values. T
 The aim of this project was to build an online resume that showcases my work experience, projects and education that I can share with potential employers
 
 ## Screenshot
-![Sample image](https://github.com/wemiibidun/portfolio_resume/blob/main/portfolio_resume.png)
+![Sample image](https://github.com/wemiibidun/portfolio_resume/blob/main/maths_game.png)
 
 ## Technologies (Language, Library and Framework)
 ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
