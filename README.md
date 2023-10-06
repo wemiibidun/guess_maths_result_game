@@ -38,9 +38,10 @@ The GUI of this project allows users to:
 * Users can guess the result
 * Game tells users if the answer is right or wrong
 
-## Link to Published Portfolio
+## Link to Published Game
 
 [web-based-maths-game]([https://wemiibidun.github.io/guess_maths_result_game/])
+
 
 ## Status
 Project is: _Complete_
