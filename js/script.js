@@ -23,20 +23,22 @@ function checkinput() {
   second_number = document.getElementById("second_number").value;
   let show_result_container = document.getElementById("result_container");
 
-  if(first_number && second_number){
+  if (first_number && second_number) {
     show_result_container.style.display = "block";
   }
-  
-  if ((first_number == "" || first_number == null) && (second_number == "" || second_number == null)) {
+
+  if (
+    (first_number == "" || first_number == null) &&
+    (second_number == "" || second_number == null)
+  ) {
     no_input = "Please enter two numbers";
     document.getElementById("output").innerHTML = no_input;
-  } else if((first_number == "") || (second_number == "")){
+  } else if (first_number == "" || second_number == "") {
     first_number = parseFloat(document.getElementById("first_number").value);
     second_number = parseFloat(document.getElementById("second_number").value);
     either_output = "Please enter a second number";
     document.getElementById("output").innerHTML = either_output;
-  }
-  else {
+  } else {
     first_number = parseFloat(document.getElementById("first_number").value);
     second_number = parseFloat(document.getElementById("second_number").value);
     document.getElementById("output").innerHTML =
@@ -72,17 +74,16 @@ function guessResult() {
       document.getElementById("display_answer").innerHTML = wrong_response;
     }
   } else if (operator == "/") {
-    let division_divisor;
-    
-    if(second_number == Number(0)){
-      division_divisor ="ERROR! You cannot use 0 as a divisor, choose another number";
-    }
-
-    answer = first_number / second_number;
-    if (users_result == answer) {
-      document.getElementById("display_answer").innerHTML = right_response;
+    if (second_number == Number(0)) {
+      document.getElementById("display_answer").innerHTML =
+        "ERROR! You cannot use 0 as a divisor, choose another number";
     } else {
-      document.getElementById("display_answer").innerHTML = division_divisor;
+      answer = first_number / second_number;
+      if (users_result == answer) {
+        document.getElementById("display_answer").innerHTML = right_response;
+      } else {
+        document.getElementById("display_answer").innerHTML = wrong_response;
+      }
     }
   }
 }
@@ -94,6 +95,5 @@ function clearButton() {
 
 // clear innerhtml after submit
 function clearOutputInnerHtml() {
-  document.getElementById("output").innerHTML = '';
+  document.getElementById("output").innerHTML = "";
 }
-
