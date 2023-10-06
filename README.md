@@ -33,9 +33,10 @@ The aim of this project was to create a simple web-based maths game that does si
 
 ## Features
 The GUI of this project allows users to:
-* View my work experience and Education
-* Have an insight to the skills I have
-* Contact me
+* Input two numbers
+* Generates random maths operator
+* Users can guess the result
+* Game tells users if the answer is right or wrong
 
 ## Link to Published Portfolio
 
